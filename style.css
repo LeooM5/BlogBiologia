@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100dvw;
+    height: 16dvh;
+    background-color: rgb(47, 94, 16);
+}
+
+header>nav {
+    width: 90dvw;
+    height: 16dvh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 7em;
+    height: 7em;
+    filter: drop-shadow(3px 3px 10px rgb(255, 251, 189));
+}

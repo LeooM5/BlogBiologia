@@ -1,0 +1,28 @@
+main .container {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  justify-items: center;
+}
+
+article {
+  text-align: center;
+  padding: 1em;
+  width: 70%;
+
+  & h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(47, 94, 16);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  & h2 {
+    margin-top: 1em;
+  }
+
+  & p {
+    margin-top: 1em;
+    text-align: justify;
+  }
+}
+

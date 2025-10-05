@@ -1,0 +1,23 @@
+{
+  "name": "blogbiologia",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/LeooM5/BlogBiologia#readme",
+  "bugs": {
+    "url": "https://github.com/LeooM5/BlogBiologia/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeooM5/BlogBiologia.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "observar": "sass --watch ./SCSS/style.scss style.css" 
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

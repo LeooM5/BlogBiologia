@@ -1,0 +1,55 @@
+.containerFlex {
+  width: 100dvw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $cor-quar;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin-left: 20px;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      color: $cor-prim;
+      transform: scale(.9);
+    }
+  }
+
+  nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 70px;
+      height: 70px;
+      filter: drop-shadow(3px 3px 10px rgb(255, 251, 189));
+    }
+  }
+}
+
+/* ...existing code... */
+
+.redes-sociais a:hover {
+  &:nth-child(1) {
+    color: #E1306C; // Cor do Instagram
+  }
+  &:nth-child(2) {
+    color: #3b5998; // Cor do Facebook
+  }
+  &:nth-child(3) {
+    color: #FF0000; // Cor do YouTube
+  }
+}

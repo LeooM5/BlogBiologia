@@ -1,0 +1,25 @@
+@import './variaveis';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "./header";
+
+i {
+    font-size: 1.5rem;
+}
+
+/* CARROSSEL */
+
+@import "./carrossel";
+
+/* ABAIXO DO CARROSSEL */
+
+@import "./abaixoDoCarrossel";
+
+/* MAIN */
+
+@import './main';

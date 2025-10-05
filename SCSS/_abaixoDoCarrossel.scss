@@ -1,0 +1,21 @@
+.parent {
+  justify-self: center;
+  height: 70dvh;
+  width: 70dvw;
+  display: grid;
+  grid-template-areas: "div1 div1 div2 div2" "div1 div1 div2 div2" "div1 div1 div3 div3" "div1 div1 div3 div3";
+  gap: 2em;
+  margin: 2em 0;
+
+  & .div1 {
+    grid-area: div1;
+  }
+
+  & .div2 {
+    grid-area: div2;
+  }
+
+  & .div3 {
+    grid-area: div3;
+  }
+}

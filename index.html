@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./IMG/Logo.png" type="image/x-icon">
   <title>Blog Belenzinho</title>
 </head>
 
@@ -16,7 +17,7 @@
     <nav>
       <div class="containerFlex">
         <div class="logo">
-          <img src="./IMG/Logo1.png" alt="Logo do Blog Belenzinho" />
+          <a href="./index.html"><img src="./IMG/Logo1.png" alt="Logo do Blog Belenzinho" < /></a>
         </div>
 
         <div class="links">
@@ -26,7 +27,7 @@
         </div>
 
         <div class="redes-sociais">
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
@@ -37,18 +38,22 @@
 
   <main>
 
-    <section>
+    <div class="banner">
       <div class="carrossel">
-        <img src="https://placehold.co/1900x1000" alt="" srcset="">
+        <button class="prev">&#10094;</button>
+        <img src="./IMG/evento-misterioso-triangulo-das-bermudas.jpg" alt="" class="ativo">
+        <img src="./IMG/paisagem-inverno-com-ceu-nublado.jpg" alt="">
+        <img src="./IMG/vista-monocromatica-das-cataratas-niagara-para-o-dia-patrimonio-mundial.jpg" alt="">
+        <button class="next">&#10095;</button>
       </div>
 
       <div class="parent">
-        <div class="div1"> <img src="https://placehold.co/500x600" alt="" srcset=""></div>
-        <div class="div2"> <img src="https://placehold.co/500x600" alt="" srcset=""></div>
-        <div class="div3"> <img src="https://placehold.co/500x600" alt="" srcset=""></div>
+        <div class="div1"> <img src="https://placehold.co/600x660" alt="" srcset=""></div>
+        <div class="div2"> <img src="https://placehold.co/600x310" alt="" srcset=""></div>
+        <div class="div3"> <img src="https://placehold.co/600x310" alt="" srcset=""></div>
       </div>
 
-    </section>
+    </div>
 
     <main>
 
@@ -154,6 +159,8 @@
     </main>
 
     <footer></footer>
+
+    <script src="./JS/app.js"></script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@ function abrirFullscreen(artigoEl) {
 
     // garante cursor padrão no overlay
     Object.assign(overlay.style, {
-      cursor: 'default'
+        cursor: 'default'
     });
 
     // Clona o conteúdo do artigo para dentro do overlay
@@ -31,10 +31,10 @@ function abrirFullscreen(artigoEl) {
     // remove qualquer cursor inline "pointer" trazido pelo clone
     // (zipa todos os elementos filhos para garantir que nada fique pointer)
     if (conteudo.hasAttribute && conteudo.hasAttribute('style')) {
-      conteudo.style.cursor = 'default';
+        conteudo.style.cursor = 'default';
     }
     conteudo.querySelectorAll('*').forEach(el => {
-      if (el.style && el.style.cursor) el.style.cursor = '';
+        if (el.style && el.style.cursor) el.style.cursor = '';
     });
 
     // Botão fechar
@@ -90,6 +90,22 @@ function abrirFullscreen(artigoEl) {
         overlay.style.opacity = '1';
         conteudo.style.transform = 'translateY(0)';
     });
+
+    // Fecha e limpa
+    function fechar() {
+        document.removeEventListener('keydown', onKeyDown);
+        overlay.style.opacity = '0';
+        conteudo.style.transform = 'translateY(6px)';
+        // esconde imediatamente o botão fechar
+        try { btnFechar.style.display = 'none'; } catch (e) { }
+        // animação de saída e remoção
+        setTimeout(() => {
+            if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+            // remove o botão fechar do DOM também
+            if (btnFechar && btnFechar.parentNode) btnFechar.parentNode.removeChild(btnFechar);
+            document.body.style.overflow = '';
+        }, 250);
+    }
 }
 
 // Anexa eventos de clique em cada artigo

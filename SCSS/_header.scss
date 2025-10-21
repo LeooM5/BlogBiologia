@@ -16,7 +16,7 @@ header {
     text-decoration: none;
     color: white;
     font-size: 1rem;
-    margin-left: 20px;
+    margin: 0 20px;
     text-transform: uppercase;
     transition: .3s ease-in-out;
 
@@ -46,10 +46,115 @@ header {
   &:nth-child(1) {
     color: #E1306C; // Cor do Instagram
   }
+
   &:nth-child(2) {
     color: #3b5998; // Cor do Facebook
   }
+
   &:nth-child(3) {
     color: #FF0000; // Cor do YouTube
+  }
+}
+
+
+
+
+/* mobile nav */
+.navMobile {
+  display: none;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 74px;
+  top: 0;
+
+  & .logoMobile img {
+    width: 56px;
+    height: auto;
+    display: block;
+  }
+
+  & .menuMobile {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* painel do menu mobile (criado/mostrado via CSS + JS) */
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+  max-width: 360px;
+  height: 100%;
+  background: #ffffff;
+  color: #111;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.35);
+  transform: translateX(-100%);
+  transition: transform .28s ease-in-out;
+  z-index: 120000;
+  padding: 24px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  & .mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    & a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 4px;
+    }
+  }
+
+  .mobile-socials {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+
+    & a {
+      font-size: 1.4rem;
+      color: inherit;
+    }
+  }
+}
+
+.mobile-menu-panel.open {
+  transform: translateX(0);
+}
+
+/* media query: show navMobile, esconder nav de desktop */
+@media (max-width: 1024px) {
+
+  /* Esconde o nav desktop (links e redes sociais) sem quebrar layout */
+  header nav .links,
+  header nav .redes-sociais {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+
+  /* container principal mantém tamanho, mas mostra navMobile */
+  .navMobile {
+    display: flex;
+   & .menuMobile {
+    position: absolute;
+    right: 2%;
+   }
+  
+  }
+
+  /* garante que logo do header não quebre */
+  .containerFlex {
+    align-items: center;
+    justify-content: space-between;
   }
 }

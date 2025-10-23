@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.className = 'mobile-menu-overlay';
     overlay.innerHTML = `
       <aside class="mobile-menu-panel" role="dialog" aria-modal="true">
+        <div class="mobile-logo" aria-label="Logo"><a href="./index.html"><img src="./IMG/Logo1.png" alt="Logo do Blog Belenzinho"</></a></div>
         <nav class="mobile-links" aria-label="Menu principal"></nav>
         <div class="mobile-socials" aria-label="Redes sociais"></div>
       </aside>

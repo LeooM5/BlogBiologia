@@ -6,12 +6,15 @@
 }
 
 header {
+  z-index: 12;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: -.1%;
   width: 100%;
   background-color: $cor-quar;
 
-  a {
+  & a {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -41,8 +44,8 @@ header {
 }
 
 /* ...existing code... */
-
-.redes-sociais a:hover {
+.redes-sociais a:hover,
+.mobile-socials a:hover {
   &:nth-child(1) {
     color: #E1306C; // Cor do Instagram
   }
@@ -68,93 +71,82 @@ header {
   height: 74px;
   top: 0;
 
-  & .logoMobile img {
-    width: 56px;
-    height: auto;
-    display: block;
-  }
-
   & .menuMobile {
     font-size: 1.6rem;
     color: #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
+
+    & i {
+      position: fixed;
+      z-index: 13;
+    }
   }
 }
 
 /* painel do menu mobile (criado/mostrado via CSS + JS) */
 .mobile-menu-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 85%;
-  max-width: 360px;
-  height: 100%;
-  background: #ffffff;
-  color: #111;
+  max-width: 9em;
+  height: 100dvh;
+  background: $cor-quar;
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.35);
   transform: translateX(-100%);
   transition: transform .28s ease-in-out;
-  z-index: 120000;
-  padding: 24px;
+  z-index: 12;
+  padding: 1em;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   & .mobile-links {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    text-align: center;
+    gap: .5em;
 
     & a {
-      color: #111;
+      color: white;
       text-decoration: none;
       font-weight: 600;
       padding: 8px 4px;
+      display: inline-block;
+      font-size: .7rem;
+      text-transform: uppercase;
+      transition: .3s ease-in-out;
     }
   }
 
   .mobile-socials {
     margin-top: 24px;
     display: flex;
+    place-content: center;
     gap: 12px;
 
+    & i {
+      font-size: 1em;
+    }
+
     & a {
-      font-size: 1.4rem;
-      color: inherit;
+      transition: .3s ease-in-out;
+      color: white;
+
+      &:hover {
+        transform: scale(.9);
+      }
     }
   }
 }
 
 .mobile-menu-panel.open {
   transform: translateX(0);
+  pointer-events: all;
 }
 
 /* media query: show navMobile, esconder nav de desktop */
-@media (max-width: 1024px) {
-
-  /* Esconde o nav desktop (links e redes sociais) sem quebrar layout */
-  header nav .links,
-  header nav .redes-sociais {
-    display: none !important;
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-  }
-
-  /* container principal mantém tamanho, mas mostra navMobile */
-  .navMobile {
-    display: flex;
-   & .menuMobile {
-    position: absolute;
-    right: 2%;
-   }
-  
-  }
-
-  /* garante que logo do header não quebre */
-  .containerFlex {
-    align-items: center;
-    justify-content: space-between;
-  }
-}

@@ -2,10 +2,12 @@ main {
   display: flex;
   flex-direction: column;
   place-items: center;
+  max-width: 100dvw;
 }
 
 main .container {
   width: 60dvw;
+  max-width: 100dvw;
   display: grid;
   grid-template-columns: repeat(2, 0.5fr);
   justify-items: center;

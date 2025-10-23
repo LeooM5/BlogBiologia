@@ -13,8 +13,11 @@
 }
 
 header {
+  z-index: 12;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: -0.1%;
   width: 100%;
   background-color: #363C32;
 }
@@ -44,13 +47,16 @@ header nav img {
 }
 
 /* ...existing code... */
-.redes-sociais a:hover:nth-child(1) {
+.redes-sociais a:hover:nth-child(1),
+.mobile-socials a:hover:nth-child(1) {
   color: #E1306C;
 }
-.redes-sociais a:hover:nth-child(2) {
+.redes-sociais a:hover:nth-child(2),
+.mobile-socials a:hover:nth-child(2) {
   color: #3b5998;
 }
-.redes-sociais a:hover:nth-child(3) {
+.redes-sociais a:hover:nth-child(3),
+.mobile-socials a:hover:nth-child(3) {
   color: #FF0000;
 }
 
@@ -63,11 +69,6 @@ header nav img {
   height: 74px;
   top: 0;
 }
-.navMobile .logoMobile img {
-  width: 56px;
-  height: auto;
-  display: block;
-}
 .navMobile .menuMobile {
   font-size: 1.6rem;
   color: #fff;
@@ -75,74 +76,70 @@ header nav img {
   display: flex;
   align-items: center;
 }
+.navMobile .menuMobile i {
+  position: fixed;
+  z-index: 13;
+}
 
 /* painel do menu mobile (criado/mostrado via CSS + JS) */
 .mobile-menu-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 85%;
-  max-width: 360px;
-  height: 100%;
-  background: #ffffff;
-  color: #111;
+  max-width: 9em;
+  height: 100dvh;
+  background: #363C32;
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.35);
   transform: translateX(-100%);
   transition: transform 0.28s ease-in-out;
-  z-index: 120000;
-  padding: 24px;
+  z-index: 12;
+  padding: 1em;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .mobile-menu-panel .mobile-links {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  text-align: center;
+  gap: 0.5em;
 }
 .mobile-menu-panel .mobile-links a {
-  color: #111;
+  color: white;
   text-decoration: none;
   font-weight: 600;
   padding: 8px 4px;
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
 }
 .mobile-menu-panel .mobile-socials {
   margin-top: 24px;
   display: flex;
+  place-content: center;
   gap: 12px;
 }
+.mobile-menu-panel .mobile-socials i {
+  font-size: 1em;
+}
 .mobile-menu-panel .mobile-socials a {
-  font-size: 1.4rem;
-  color: inherit;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+.mobile-menu-panel .mobile-socials a:hover {
+  transform: scale(0.9);
 }
 
 .mobile-menu-panel.open {
   transform: translateX(0);
+  pointer-events: all;
 }
 
 /* media query: show navMobile, esconder nav de desktop */
-@media (max-width: 1024px) {
-  /* Esconde o nav desktop (links e redes sociais) sem quebrar layout */
-  header nav .links,
-  header nav .redes-sociais {
-    display: none !important;
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-  }
-  /* container principal mantém tamanho, mas mostra navMobile */
-  .navMobile {
-    display: flex;
-  }
-  .navMobile .menuMobile {
-    position: absolute;
-    right: 2%;
-  }
-  /* garante que logo do header não quebre */
-  .containerFlex {
-    align-items: center;
-    justify-content: space-between;
-  }
-}
 i {
   font-size: 1.5rem;
 }
@@ -194,11 +191,12 @@ div.banner .carrossel .next {
 .parent {
   justify-self: center;
   height: 70dvh;
-  width: 70dvw;
   display: grid;
   grid-template-areas: "div1 div1 div2 div2" "div1 div1 div2 div2" "div1 div1 div3 div3" "div1 div1 div3 div3";
   gap: 2em;
   margin: 2em 0;
+  width: 70%;
+  max-width: 100dvw;
 }
 .parent .div1 {
   grid-area: div1;
@@ -215,10 +213,12 @@ main {
   display: flex;
   flex-direction: column;
   place-items: center;
+  max-width: 100dvw;
 }
 
 main .container {
   width: 60dvw;
+  max-width: 100dvw;
   display: grid;
   grid-template-columns: repeat(2, 0.5fr);
   justify-items: center;
@@ -291,6 +291,64 @@ article p {
 .fullscreen-article-content .title {
   width: 40dvw;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  /* Esconde o nav desktop (links e redes sociais) sem quebrar layout */
+  header nav .links,
+  header nav .redes-sociais {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+  /* container principal mantém tamanho, mas mostra navMobile */
+  .navMobile {
+    display: flex;
+  }
+  .navMobile .menuMobile {
+    position: absolute;
+    right: 10%;
+  }
+  aside div.mobile-logo a img {
+    width: 90%;
+    filter: drop-shadow(2px 2px 8px rgb(255, 251, 189));
+  }
+  /* garante que logo do header não quebre */
+  .containerFlex {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .parent {
+    height: 50dvh;
+    gap: 0.5em;
+  }
+  .parent div {
+    height: 60%;
+  }
+  .parent .div1 {
+    height: 80%;
+  }
+  .parent img {
+    width: 100%;
+    height: 100%;
+  }
+  main .container {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    place-items: center;
+  }
+  .fullscreen-article-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .fullscreen-article-content .title {
+    width: 70dvw;
+  }
+  .fullscreen-article-content .description {
+    width: 80dvw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

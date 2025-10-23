@@ -1,4 +1,78 @@
-@media (max-width: 1024px) {
+@media (max-width: 1804px) {
+
+    /* Esconde o nav desktop (links e redes sociais) sem quebrar layout */
+    header nav .links,
+    header nav .redes-sociais {
+        display: none !important;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+    }
+
+    /* container principal mantém tamanho, mas mostra navMobile */
+    .navMobile {
+        display: flex;
+
+        & .menuMobile {
+            position: absolute;
+            right: 10%;
+        }
+    }
+
+    aside div.mobile-logo a img {
+        width: 90%;
+        filter: drop-shadow(2px 2px 8px rgb(255, 251, 189));
+    }
+
+    /* garante que logo do header não quebre */
+    .containerFlex {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .parent {
+        height: 50dvh;
+        gap: .5em;
+
+        & div {
+            height: 60%;
+        }
+
+        & .div1 {
+            height: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    main .container {
+        display: flex;
+        flex-direction: column;
+        width: 99dvw;
+        place-items: center;
+        margin-top: 15em;
+    }
+
+    .fullscreen-article-content {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+        & .title {
+            width: 80dvw;
+        }
+
+        & .description {
+            width: 80dvw;
+        }
+    }
+
+}
+
+@media (max-width: 1504px) {
 
     /* Esconde o nav desktop (links e redes sociais) sem quebrar layout */
     header nav .links,
@@ -58,6 +132,7 @@
     .fullscreen-article-content {
         display: flex;
         flex-direction: column;
+        place-items: center;
 
         & .title {
             width: 70dvw;

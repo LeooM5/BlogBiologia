@@ -6,20 +6,34 @@ main {
 }
 
 main .container {
-  width: 60dvw;
+  width: 70dvw;
   max-width: 100dvw;
   display: grid;
   grid-template-columns: repeat(2, 0.5fr);
   justify-items: center;
+  margin-bottom: 3em;
 }
 
 article {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 1em;
   width: 65%;
+  // height: 88%;
+
+  & span {
+    font-weight: bold;
+  }
+
+  & img {
+    width: 100%;
+    height: 60%;
+  }
 
   & h1 {
-    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: rgb(47, 94, 16);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -27,11 +41,14 @@ article {
 
   & h2 {
     margin-top: 1em;
+    font-size: 1em;
   }
 
   & p {
     margin-top: 1em;
     text-align: justify;
+    height: 9em;
+    overflow: hidden;
   }
 }
 
@@ -53,6 +70,7 @@ article {
 .fullscreen-article-content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   max-width: 100dvw;
   width: 90%;
@@ -68,23 +86,26 @@ article {
   transition: transform .25s ease-in-out;
 
   & img {
-    width: 80%;
+    width: 35%;
+    height: 100%;
   }
 
   & .description {
     align-self: center;
-    width: 40dvw;
+    width: 50%;
     display: flex;
     flex-direction: column;
     place-items: center;
 
     & p {
       width: 75%;
+      overflow: visible;
+      height: auto;
     }
   }
 
   & .title {
-    width: 40dvw;
+    width: 100%;
     text-align: center;
   }
 }

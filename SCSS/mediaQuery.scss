@@ -31,16 +31,7 @@
     }
 
     .parent {
-        height: 50dvh;
         gap: .5em;
-
-        & div {
-            height: 60%;
-        }
-
-        & .div1 {
-            height: 80%;
-        }
 
         & img {
             width: 100%;
@@ -53,23 +44,20 @@
         flex-direction: column;
         width: 99dvw;
         place-items: center;
-        margin-top: 15em;
     }
 
-    .fullscreen-article-content {
-        display: flex;
-        flex-direction: column;
+    body>main>div>article {
         place-items: center;
+        width: 45dvw;
 
-        & .title {
-            width: 80dvw;
-        }
-
-        & .description {
-            width: 80dvw;
+        & p {
+            height: 8.3em;
         }
     }
 
+    .fullscreen-article-content img {
+        height: 100%;
+    }
 }
 
 @media (max-width: 1504px) {
@@ -104,21 +92,16 @@
         justify-content: space-between;
     }
 
+
     .parent {
-        height: 50dvh;
-        gap: .5em;
+        display: flex;
+        flex-direction: column;
 
-        & div {
-            height: 60%;
-        }
+        div {
 
-        & .div1 {
-            height: 80%;
-        }
-
-        & img {
-            width: 100%;
-            height: 100%;
+            & img {
+                height: 25em;
+            }
         }
     }
 
@@ -127,20 +110,49 @@
         flex-direction: column;
         width: 100dvw;
         place-items: center;
+        margin-bottom: 5em;
+
+        & article {
+            width: 100dvw;
+
+            & p {
+                height: 7.5em;
+            }
+        }
     }
 
     .fullscreen-article-content {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         place-items: center;
 
-        & .title {
-            width: 70dvw;
+        & img {
+            width: 100%;
+            height: 50%;
         }
 
         & .description {
-            width: 80dvw;
+            width: 100%;
+
+            & p {
+                width: 100%;
+            }
         }
     }
 
+    div.banner .carrossel {
+        height: 70dvh;
+
+        & img {
+            height: 100%;
+        }
+    }
+
+    footer {
+        height: 5em;
+
+        & .foot h2 {
+            font-size: 1.2em;
+        }
+    }
 }

@@ -1,12 +1,15 @@
 .parent {
   justify-self: center;
-  height: 70dvh;
   display: grid;
   grid-template-areas: "div1 div1 div2 div2" "div1 div1 div2 div2" "div1 div1 div3 div3" "div1 div1 div3 div3";
-  gap: 2em;
-  margin: 2em 0;
+  gap: .5em;
   width: 70%;
   max-width: 100dvw;
+  margin: 2em 0;
+
+  & img {
+    width: 100%;
+  }
 
   & .div1 {
     grid-area: div1;

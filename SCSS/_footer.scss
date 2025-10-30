@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    place-items: center;
+    z-index: 12;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    background-color: $cor-quar;
+    color: white;
+    text-transform: uppercase;
+
+    & .foot {
+        width: 100%;
+        display: flex;
+        place-content: center;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: .7em;
+    }
+
+}

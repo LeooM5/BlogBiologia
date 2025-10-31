@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   mostrarImagem(indice);
+
+  setInterval(proximaImagem, 4000);
 });
 
 // 

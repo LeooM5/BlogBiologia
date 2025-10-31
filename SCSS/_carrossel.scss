@@ -1,5 +1,4 @@
 div.banner {
-    width: 100%;
     display: flex;
     flex-direction: column;
     place-content: center;
@@ -10,13 +9,12 @@ div.banner .carrossel {
     margin-top: 4.5em;
     position: relative;
     width: 100%;
-    height: 100dvh;
-    overflow: hidden;
+    height: 92.3dvh;
 
     & img {
         position: absolute;
-        width: 100dvw;
-        height: 100dvh;
+        width: 100%;
+        height: 100%;
         object-fit: fill;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
@@ -34,6 +32,7 @@ div.banner .carrossel {
         transform: translateY(-50%);
         background: transparent;
         color: #eee;
+        opacity: .3;
         border: none;
         font-size: 1.5em;
         cursor: pointer;

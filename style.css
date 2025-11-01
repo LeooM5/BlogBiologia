@@ -144,6 +144,18 @@ i {
   font-size: 1.5rem;
 }
 
+bodyp {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+bodyh1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
 /* CARROSSEL */
 div.banner {
   display: flex;

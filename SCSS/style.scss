@@ -12,6 +12,22 @@ i {
     font-size: 1.5rem;
 }
 
+body{
+    &p{
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+
+    }
+
+    &h1, h2, h3, h4, h5, h6{
+        font-family: "Nunito", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+}
+
 /* CARROSSEL */
 
 @import "./carrossel";

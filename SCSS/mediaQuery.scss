@@ -49,7 +49,7 @@
         width: 65%;
 
         & p {
-            height: 7em;
+            height: 7.2em;
         }
     }
 
@@ -136,6 +136,18 @@
         }
     }
 
+    article {
+
+        & h1 {
+            font-size: 1em;
+        }
+
+        & h2 {
+            font-size: .8em;
+            font-weight: 600;
+        }
+    }
+
     div.banner .carrossel {
         height: 50dvh;
 
@@ -150,5 +162,9 @@
         & .foot h2 {
             font-size: 1.2em;
         }
+    }
+
+    body>main>div>article {
+        width: 90%;
     }
 }

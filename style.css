@@ -253,6 +253,7 @@ article {
   flex-direction: column;
   text-align: center;
   padding: 1em;
+  gap: 1em;
   width: 65%;
 }
 article span {
@@ -275,7 +276,7 @@ article h2 {
 article p {
   margin-top: 1em;
   text-align: justify;
-  height: 9em;
+  height: 9.5em;
   overflow: hidden;
 }
 
@@ -369,7 +370,7 @@ footer .foot {
     width: 65%;
   }
   body > main > div > article p {
-    height: 7em;
+    height: 7.2em;
   }
   .fullscreen-article-content img {
     height: 100%;
@@ -433,6 +434,13 @@ footer .foot {
   .fullscreen-article-content .description p {
     width: 100%;
   }
+  article h1 {
+    font-size: 1em;
+  }
+  article h2 {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
   div.banner .carrossel {
     height: 50dvh;
   }
@@ -444,6 +452,9 @@ footer .foot {
   }
   footer .foot h2 {
     font-size: 1.2em;
+  }
+  body > main > div > article {
+    width: 90%;
   }
 }
 p {

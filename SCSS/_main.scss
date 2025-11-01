@@ -19,8 +19,8 @@ article {
   flex-direction: column;
   text-align: center;
   padding: 1em;
+  gap: 1em;
   width: 65%;
-  // height: 88%;
 
   & span {
     font-weight: bold;
@@ -46,7 +46,7 @@ article {
   & p {
     margin-top: 1em;
     text-align: justify;
-    height: 9em;
+    height: 9.5em;
     overflow: hidden;
   }
 }

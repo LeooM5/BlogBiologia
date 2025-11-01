@@ -34,7 +34,6 @@ article {
   & h1 {
     text-transform: uppercase;
     font-size: 1.5rem;
-    margin-bottom: 20px;
     color: rgb(47, 94, 16);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
@@ -72,6 +71,7 @@ article {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  place-items: center;
   max-width: 100dvw;
   width: 90%;
   max-height: 100dvh;

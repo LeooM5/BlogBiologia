@@ -1,9 +1,14 @@
 @import './variaveis';
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @import "./header";
@@ -12,8 +17,8 @@ i {
     font-size: 1.5rem;
 }
 
-body{
-    &p{
+body {
+    &p {
         font-family: "Roboto", sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
@@ -47,3 +52,7 @@ body{
 // Media Query
 
 @import "./mediaQuery";
+
+p {
+    font-family: "Nunito", sans-serif;
+}
